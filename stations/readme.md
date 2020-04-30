@@ -19,6 +19,7 @@ This code can be found in __*filter_microbit.js*__
 
 Once the correct signal has been filtered, the Raspberry Pi makes an API call to Firebase to update the status of the station button.
 API endpoint: https://smrt-a02d5.firebaseio.com/station/1/1.json
+Method: *PUT*
 
 The first **1** represents the station number, meaning station 1 in this case.
 The second **1** represents the door number, either 1 for the first door or 2 for the second door.
