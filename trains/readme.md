@@ -1,19 +1,21 @@
-# Raspberry Pi Simulating Train Station
+# Raspberry Pi Simulating Train Cabin
 
 The following is the flow used in the Raspberry Pi which would be installed in a train station
 ![alt text][logo]
 
-[logo]: ./station-flow.JPG "Logo Title Text 2"
+[logo]: ./train-flow.JPG "Logo Title Text 2"
 
 ## BeaconScanner
 
 The BeaconScanner node scans for all bluetooth signals, necessary for our simulation using a Microbit bluetooth signal.
 
-## Filter Microbit
+## Filter & Set Next Station
 
-Due to the presence of many bluetooth emmitting devices, the code in this node filters the signal ID and uses only the signal by the corresponding microbit installed. This microbit simulates the button being pressed at the station, with a signal with value of either 1 or 0 being emmitted and captured by the Raspberry Pi.
+Due to the presence of many bluetooth emmitting devices, the code in this node filters the signal ID and uses only the signal by the corresponding microbit installed. This microbit dynamically sets the next station number the train is going to, and is simulated as a system input.
 
-This code can be found in __*filter_microbit.js*__
+The input from the microbit is then set as a global variable in the Raspberry Pi.
+
+This code can be found in __*filter_and_set_nextStation.js*__
 
 ## Set Val
 
